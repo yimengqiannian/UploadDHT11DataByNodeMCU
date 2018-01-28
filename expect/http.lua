@@ -73,7 +73,7 @@ local function response(content,isNoCache,refreshTime,refreshURL)
 	if type(content)~='string' then content='' end
 	return "HTTP/1.1 200 OK\r\n"
 		.."Server: "..AGENT.."\r\n"
-		.."Content-Type: text/html\r\n"
+		.."Content-Type: text/html;charset=utf-8\r\n"
 		.."Content-Length: "..string.len(content).."\r\n"
 		..(refreshTime and "Refresh: "..refreshTime..";URL="..(refreshURL or '').."\r\n" or "")
 		..(isNoCache
