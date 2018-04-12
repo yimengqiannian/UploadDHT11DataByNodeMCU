@@ -1,5 +1,7 @@
 wifi.setmode(wifi.STATION)
 wifi.sta.config("yourSID","yourPassword")
+wifi.sta.autoconnect(1)
+
 local domain = "yourDomain"
 local ip = "yourIP"
 dofile"lib.lc"
